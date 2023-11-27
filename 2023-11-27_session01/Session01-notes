@@ -1,0 +1,38 @@
+* Go to [Maven's course page](https://maven.com/plotly/web-apps/2/home) and complete the Pre-course modules
+* See [dash docs in here](https://dash.plotly.com/)
+* Week-1 Modules are:
+    * Dash fundamentals
+    * Dash App Interactivity
+* Instructor is Adam Schroeder - community manager
+    * This is all open-source, all free
+    * Build interactive data apps
+    * He is in NYC Harlem, company is based in Montreal
+* Dash allow you to build dashboards, interactivity, buttons, etc... including plotly graphs.
+    * Dash is python, you can use any python library with dash. Connect it to any data source you can with Python.
+* Tech stack
+    * Wasm dash will be our editor, we can create dash apps directly on the browser
+    * As we get more advanced with larger dataset, it is highly recommended to use VS Code and GitHub locally instead. To deploy to the web and share it with others
+    * Get started with the [tech stack stuff here](https://open-resources.github.io/dash_curriculum/part1/chapter0.html)
+* Let's get into [wasm-dash](https://wasmdash.vercel.app/)
+    * you can interact with the app on the right, you have an editor and a console ![wasm dash screenshot](image-1.png)
+    * You can build a proof of concept dash app right from the browser
+    * This is based on cookies! There is no file system. So if you refresh it doesn't save anything
+* We're going to use two datasets:
+    * [us exports](https://github.com/plotly/datasets/blob/master/Dash-Course/US-Exports/2011_us_ag_exports.csv)
+    * [makeup shades](https://github.com/plotly/datasets/blob/master/Dash-Course/makeup-shades/shades.csv)
+* Let's look at the code
+    * ![code example](image-2.png)
+    * Everything you put inside the layout is what you'll see on your screen, wrapped in a html Div ![app layout](image-3.png)
+    * There is no interactivity, though. Enter: "The Callback". This is the most complex thing to understand. The core of the dash app. It is a decorator
+        * You must specify which component of which property on input and output ![callback decorator sntax](image-4.png)
+        * Then you define the callback function with however many arguments your callback decorator has as inputs ![Callback function arguments](image-5.png)
+        * The object returned by the callback function is assigned to the component property of the output. That's what so cool
+            * f1 is returned to the figure property of the graph 1 ![f1 to figure property](image-6.png)
+            THAT'S THE WHOLE IDEA OF THE DASH CALLBACK
+        * The callback is triggered, and the callback function is invoked, is when we change something in the component property on the input. Such as clicking another option on the input control.
+        * Good example, the callback will be invoked when the app usesr clicks on the dropdown, not the radio buttons now ![Dropdown trigger](image-7.png)
+* [Plotly express graphic library](https://plotly.com/python/)
+* Best practice is to do multiple call-backs. One for each component of the dashboard you want. You could do it, but you don't want 10 inputs in one call back
+* Dash Enterprise does enterprise-stuff: Authentication, backups, even greater ease for design kit stuff, etc.
+* Dash is build on top of flask
+* This is a community drive enricher of Dash layouts. Very customizable too. [Mantine](https://www.dash-mantine-components.com/). This one is not open source, it is very powerful. 
