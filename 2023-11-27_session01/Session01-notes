@@ -1,5 +1,5 @@
 * Go to [Maven's course page](https://maven.com/plotly/web-apps/2/home) and complete the Pre-course modules
-* See [dash docs in here](https://dash.plotly.com/)
+* See [dash docs in here](https://dash.plotly.com/) including install instructions (Dash installs inherently come with Plotly)
 * Week-1 Modules are:
     * Dash fundamentals
     * Dash App Interactivity
