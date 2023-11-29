@@ -566,6 +566,20 @@ diskcache = ["diskcache (>=5.2.1)", "multiprocess (>=0.70.12)", "psutil (>=5.8.0
 testing = ["beautifulsoup4 (>=4.8.2)", "cryptography (<3.4)", "dash-testing-stub (>=0.0.2)", "lxml (>=4.6.2)", "multiprocess (>=0.70.12)", "percy (>=2.0.2)", "psutil (>=5.8.0)", "pytest (>=6.0.2)", "requests[security] (>=2.21.0)", "selenium (>=3.141.0,<=4.2.0)", "waitress (>=1.4.4)"]
 
 [[package]]
+name = "dash-ag-grid"
+version = "2.4.0"
+description = "Dash wrapper around AG Grid, the best interactive data grid for the web."
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "dash_ag_grid-2.4.0-py3-none-any.whl", hash = "sha256:75cf9508c2abb1edc5c4a2e6d96abb8cb582f650a3946d7cd89065b211b62995"},
+    {file = "dash_ag_grid-2.4.0.tar.gz", hash = "sha256:091d6f70193ef18f534d6f18a2df69cdcbd9486fc6579572373bb554d3ab6bfd"},
+]
+
+[package.dependencies]
+dash = ">=2"
+
+[[package]]
 name = "dash-core-components"
 version = "2.0.0"
 description = "Core component suite for Dash"
@@ -3362,4 +3376,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "c03c56412f69f75342b6c3a32d62f3023e98a2e393887fc46239ffe589a313bd"
+content-hash = "ea472be9f02007ddf4e2d8dfd1c0003defd719605dafe920b94745fa88dba1d9"
